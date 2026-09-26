@@ -62,4 +62,4 @@ User Input → Frontend → FastAPI Backend → AI Service → Backend Response 
 
 ## 8. Conclusion
 
-The system design organizes PocketSmart AI into separate modules to support maintainability, usability, and future improvements.
+The system design organizes PocketSmart AI into separate modules to support maintainability, usability, and future improvements.code docs\04-Project-Planning.md

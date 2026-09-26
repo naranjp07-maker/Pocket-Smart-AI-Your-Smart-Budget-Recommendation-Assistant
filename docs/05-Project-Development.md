@@ -49,4 +49,4 @@ A fallback mechanism is included to handle situations where AI recommendations a
 - Git and GitHub
 
 ## 8. Project Status
-This document describes the project's development structure and planned functionality. Actual feature completion and testing results should be updated after verification.
+This document describes the project's development structure and planned functionality. Actual feature completion and testing results should be updated after verification.code docs\06-Project-Testing.md
