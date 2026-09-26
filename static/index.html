@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PocketSmart AI — Plan beautifully, spend wisely</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">P</span><span>PocketSmart<span class="brand-ai"> AI</span></span></a><nav><a href="#planner">Planner</a><a href="#history">My Plans</a></nav><div class="top-actions"><span id="user-label"></span><button class="btn btn-ghost" id="logout-btn" hidden>Log out</button><button class="btn btn-dark" id="auth-open">Get started</button></div></header>
+<main>
+<section class="hero">
+ <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> YOUR PERSONAL BUDGET ASSISTANT</div><h1>Big ideas.<br><span>Smarter budgets.</span></h1><p>Plan your space, celebrate your moments, and find your style—with thoughtful recommendations that fit your budget.</p><div class="hero-cta"><a class="btn btn-dark" href="#planner">Start planning <span>↗</span></a><span class="trust">✦ Personalized plans, made simple</span></div></div>
+ <div class="hero-visual"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Warm modern living room"><div class="floating-card"><span class="float-icon">✦</span><div><strong>Make every rupee count</strong><small>Ideas tailored to your budget</small></div></div><div class="image-caption">A little more clarity for every plan.</div></div>
+</section>
+<section class="category-strip"><div><span class="strip-num">01</span><strong>Home interiors</strong><small>Make room for your style</small></div><div><span class="strip-num">02</span><strong>Parties & events</strong><small>Celebrate without overspending</small></div><div><span class="strip-num">03</span><strong>Jewelry & styling</strong><small>Find your occasion look</small></div></section>
+<section class="planner-section" id="planner">
+ <div class="section-heading"><div><div class="eyebrow">LET'S MAKE A PLAN</div><h2>What are we planning today?</h2></div><p>Tell us what matters to you. We’ll organize your budget and suggest ideas to explore.</p></div>
+ <div class="planner-grid"><div class="form-panel">
+  <div class="step-label">01 <span>YOUR PLAN</span></div>
+  <div class="type-tabs" role="group" aria-label="Plan type"><button class="type-tab active" data-type="interior"><span>⌂</span> Home</button><button class="type-tab" data-type="party"><span>✦</span> Party</button><button class="type-tab" data-type="jewelry"><span>◇</span> Jewelry</button></div>
+  <form id="plan-form">
+   <label for="budget">Your total budget <span class="required">*</span></label><div class="money-input"><span>₹</span><input id="budget" type="number" min="1" max="100000000" value="10000" required></div>
+   <div id="guest-wrap" hidden><label for="guest-count">Number of guests</label><input id="guest-count" type="number" min="1" placeholder="e.g. 25"></div>
+   <label for="preferences">Your preferences</label><textarea id="preferences" rows="4" placeholder="Tell us your style, occasion, colors, needs..."></textarea>
+   <button class="btn btn-dark btn-full" id="generate-btn" type="submit">Generate my plan <span>→</span></button>
+   <p class="form-note">Your budget stays yours. Recommendations are suggestions, not live price quotes.</p>
+  </form>
+ </div><div class="visual-panel"><img id="planner-image" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1100&q=85" alt="Home interior inspiration"><div class="visual-overlay"><span class="eyebrow">YOUR VISION, YOUR BUDGET</span><h3 id="visual-title">A home that feels like you.</h3><p id="visual-desc">Bring your favorite textures, colors, and ideas together.</p></div></div></div>
+ <div id="result" class="result" aria-live="polite"></div>
+</section>
+<section class="history-section" id="history"><div class="section-heading"><div><div class="eyebrow">YOUR SAVED IDEAS</div><h2>My plans</h2></div><button class="btn btn-ghost" id="load-plans">Refresh plans ↻</button></div><div id="plans-list" class="plans-grid"><div class="empty-state">Log in to see your saved plans here.</div></div></section>
+<section class="bottom-banner"><div><div class="eyebrow">A BETTER WAY TO PLAN</div><h2>Good plans start<br>with a little clarity.</h2></div><a href="#planner" class="btn btn-light">Make a plan <span>↗</span></a></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">P</span><span>PocketSmart<span class="brand-ai"> AI</span></span></a><span>Plan thoughtfully. Spend confidently.</span><span>© PocketSmart AI</span></footer>
+<div class="modal-backdrop" id="auth-modal" hidden><div class="modal"><button class="modal-close" id="auth-close" aria-label="Close">×</button><div class="eyebrow">WELCOME TO POCKETSMART</div><h2 id="auth-title">Create your account</h2><div class="auth-toggle"><button class="active" data-auth="register">Create account</button><button data-auth="login">Log in</button></div><form id="auth-form"><div id="name-wrap"><label for="auth-name">Your name</label><input id="auth-name" placeholder="Full name"></div><label for="auth-email">Email address</label><input id="auth-email" type="email" required placeholder="you@example.com"><label for="auth-password">Password</label><input id="auth-password" type="password" minlength="6" required placeholder="At least 6 characters"><button class="btn btn-dark btn-full" id="auth-submit">Create account</button><p id="auth-message" class="auth-message"></p></form></div></div>
+<script src="/static/app.js"></script>
+</body></html>
