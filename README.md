@@ -1,38 +1,55 @@
-PocketSmart AI: Your Smart Budget & Recommendation Assistant
+✨ PocketSmart AI
 
-PocketSmart AI is a budget-planning and recommendation web application.
-It helps users plan expenses for needs such as interior design, parties,
-and jewelry based on their budget and preferences. It can use Google's
-Gemini AI to generate personalized suggestions and provides
-shopping-search links for exploring products.
+Your Smart Budget & Recommendation Assistant
 
-Features
+Plan smarter. Spend better. Make every budget count.
 
-User registration and login
+PocketSmart AI is a smart budgeting and recommendation assistant
+designed to help users organize plans around their needs, preferences,
+and available budget. From decorating a room to planning a party or
+choosing jewelry, the app helps turn ideas into practical, budget-aware
+suggestions with the support of Google Gemini AI.
 
-Budget-based planning based on user preferences
+🌟 What You Can Do
 
-Planning categories: Interior Design, Party Planning, and Jewelry
+Feature                             Description
 
-AI-generated suggestions through the Gemini API, when configured
+🔐 Account Access               Create an account and log in to use
+your personal planning space.
 
-Plan history, where supported by the application
+🏡 Interior Planner             Explore ideas for decorating and
+organizing a space within your
+budget.
 
-Shopping-search links for related products
+🎉 Party Planner                Get suggestions for planning a
+celebration according to your
+budget and preferences.
 
-Technology Stack
+💎 Jewelry Planner              Explore jewelry recommendations
+based on your needs and budget.
 
-Backend: Python, FastAPI
+🤖 AI Recommendations           Generate personalized suggestions
+using the Gemini API when
+configured.
 
-Frontend: HTML, CSS, JavaScript
+🗂️ Plan History                 Revisit saved plans if history is
+enabled in the application.
 
-Database: SQLite with SQLAlchemy
+🧰 Built With
 
-AI integration: Google Gemini API
+Python --- application programming
 
-Server: Uvicorn
+FastAPI --- backend and API framework
 
-Project Structure
+HTML, CSS & JavaScript --- frontend
+
+SQLite & SQLAlchemy --- data storage
+
+Google Gemini API --- AI-powered suggestions
+
+Uvicorn --- development server
+
+📁 Project Layout
 
 PocketSmartAI/
 ├── app/
@@ -48,114 +65,109 @@ PocketSmartAI/
 │   ├── index.html
 │   ├── style.css
 │   └── app.js
-├── .env                 # API key/settings (do not commit)
+├── docs/                  # Project phase documentation (if included)
+├── .env                   # Private API configuration — do not commit
 ├── requirements.txt
-├── pocketsmart.db       # Local database
+├── pocketsmart.db         # Local database
 └── README.md
 
-Requirements
+⚙️ Getting Started
 
-Windows, macOS, or Linux
+Prerequisites
 
-Python 3.13 (64-bit recommended for the tested Windows setup)
+Python 3.13 (64-bit recommended for the Windows setup tested)
 
 pip
 
-A Google Gemini API key for AI-generated recommendations
+A Gemini API key for AI-generated suggestions
 
-Installation and Setup (Windows / VS Code)
+1. Open the project
 
-1. Open the project folder
-
-Open the project folder in VS Code. In the terminal, move to the folder
-containing app/ and requirements.txt.
+Open the project folder in Visual Studio Code. Open the integrated
+terminal in the folder that contains app/ and requirements.txt.
 
 2. Create a virtual environment
 
 py -3.13 -m venv .venv
 
-3. Install dependencies
+3. Install the required packages
 
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 
-4. Configure the Gemini API key
+4. Add your Gemini API key
 
-Create a .env file in the project root. Use the environment-variable
-name expected by app/gemini_service.py. For example, if the code reads
-GEMINI_API_KEY:
+Create a .env file in the project root. Check app/gemini_service.py
+for the exact environment-variable name. For example, if the code uses
+GEMINI_API_KEY, add:
 
 GEMINI_API_KEY=your_gemini_api_key_here
 
-Keep your API key private. Do not upload .env or share the key
-publicly.
+Keep this key private. Never publish your .env file or API key.
 
-5. Start the application
+5. Launch the app
 
 Run this command from the project root:
 
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --reload
 
-6. Open the website
+6. Visit PocketSmart AI
 
-Open this address in your browser:
+Open your browser and go to:
 
 http://127.0.0.1:8000
 
-Stop the server by pressing Ctrl + C in the terminal.
+To stop the server, press Ctrl + C in the terminal.
 
-How to Use
+🧭 Using the App
 
-Open the application in your browser.
+Register or log in.
 
-Register a new account or log in.
-
-Choose a planning category: Interior, Party, or Jewelry.
+Select Interior, Party, or Jewelry.
 
 Enter your budget and preferences.
 
-Generate the plan and review the recommendations.
+Generate your plan.
 
-Explore product-search links and revisit saved plans if plan history
-is enabled.
+Review the suggestions and explore product-search links.
 
-Troubleshooting
+Check saved plans if plan history is available.
 
-ModuleNotFoundError: No module named 'app': Make sure the
-terminal is in the project root---the folder containing the app
-directory---then run the server command again.
+🛠️ Common Issues
 
-Dependency installation errors: Use 64-bit Python and recreate
-the virtual environment if needed.
+Issue                                          What to check
 
-Gemini API errors: Check that the API key and
-environment-variable name are correct, verify API access and quota,
-and retry after a short wait if the service is temporarily
-unavailable.
+ModuleNotFoundError: No module named 'app'   Run the command from the project
+root---the folder containing the
+app directory.
 
-Website does not open: Confirm that Uvicorn is running and visit
-http://127.0.0.1:8000.
+Package installation fails                     Confirm that you're using 64-bit
+Python and recreate the virtual
+environment if needed.
 
-Security Notes
+Gemini API error                               Check the API key,
+environment-variable name, API
+access, and quota. Temporary
+service errors may require retrying
+later.
 
-Never commit .env, API keys, or private credentials.
+🔒 Security
 
-Avoid committing the local SQLite database unless there is a
-specific reason to share test data.
+Keep API keys and credentials out of GitHub.
 
-If an API key is exposed publicly, revoke it and create a new one.
+Do not commit .env.
 
-Project Documentation
+Avoid publishing the local database if it contains personal or
+test-user data.
 
-Project phase documentation is available in the docs/ folder, if
-included in this repository.
+If a key is exposed, revoke it and generate a replacement.
 
-Disclaimer
+📌 Important Note
 
-AI-generated recommendations may be incomplete or inaccurate. Verify
-prices, availability, and product details on the destination platforms
-before making a purchase.
+AI recommendations are suggestions and may not always be accurate or up
+to date. Confirm product prices, availability, and details on the
+relevant platform before purchasing.
 
-Author
+👤 Project Author
 
 Naran JP
